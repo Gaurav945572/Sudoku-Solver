@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,500;1,700&family=Zen+Antique+Soft&family=Zen+Kurenaido&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,500;1,700&family=Zen+Antique+Soft&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+        href="https://is5-ssl.mzstatic.com/image/thumb/Purple125/v4/c1/da/8b/c1da8bb1-24e9-6f9f-6e39-9c313f0cd160/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png">
+    <script src="sudoku.js"></script>
+
+    <title>Sudoku Solver</title>
+
+</head>
+
+<body>
+
+    <div id="container">
+        <div class="header">
+            <h1 class="padd"><img src="/Sudoku solver/giphy.gif"
+                style="height: 1em; width: 1em; margin: 0px 0.05em 0px 0.1em; vertical-align: -0.1em;" alt="">SudokU Solver<img src="/Sudoku solver/giphy.gif"
+                style="height: 1em; width: 1em; margin: 0px 0.05em 0px 0.1em; vertical-align: -0.1em;" alt=""></h1>
+        </div>
+
+        <table id="sudokuBoard">
+
+            <colgroup>
+                <col>
+                <col>
+                <col>
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+
+                    <tbody>
+                <tr>
+                    <td class="box" contenteditable="true"></td>
+                    <td class="box" contenteditable="true"></td>
+                    <td class="box" contenteditable="true"></td>
+                    <td class="box" contenteditable="true"></td>
+                    <td class="box" contenteditable="true"></td>
+                    <td class="box" contenteditable="true"></td>
+                    <td class="box" contenteditable="true"></td>
+                    <td class="box" contenteditable="true"></td>
+                    <td class="box" contenteditable="true"></td>
+            <tr>
+                <td class="box" contenteditable="true"></td>
+                <td  class="box" contenteditable="true"></td>
+                <td class="box" contenteditable="true"></td>
+                <td class="box" contenteditable="true"></td>
+                <td class="box" contenteditable="true"></td>
+                <td class="box" contenteditable="true"></td>
+                <td  class="box" contenteditable="true"></td>
+                <td class="box" contenteditable="true"></td>
+                <td class="box" contenteditable="true"></td>
+                
+            <tr>
+                <td class="box" contenteditable="true"></td>
+                <td class="box" contenteditable="true"></td>
+                <td class="box"  contenteditable="true"></td>
+                <td class="box" contenteditable="true"></td>
+                <td class="box"contenteditable="true"></td>
+                <td class="box"contenteditable="true"></td>
+                <td class="box" contenteditable="true"></td>
+                <td class="box" contenteditable="true"></td>
+                <td class="box" contenteditable="true"></td>
+                <tbody>
+                    <tr>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                    <tr>
+                        <td class ="box" contenteditable="true"></td>
+                        <td class ="box"  contenteditable="true"></td>
+                        <td class ="box"  contenteditable="true"></td>
+                        <td class ="box" contenteditable="true"></td>
+                        <td class ="box" contenteditable="true"></td>
+                        <td class ="box" contenteditable="true"></td>
+                        <td class ="box" contenteditable="true"></td>
+                        <td class ="box" contenteditable="true"></td>
+                        <td class ="box" contenteditable="true"></td>
+                    <tr> 
+                        <td class ="box" contenteditable="true"></td>
+                        <td class ="box" contenteditable="true"></td>
+                        <td class ="box" contenteditable="true"></td>
+                        <td class ="box" contenteditable="true"></td>
+                        <td class ="box" contenteditable="true"></td>
+                        <td class ="box" contenteditable="true"></td>
+                        <td class ="box" contenteditable="true"></td>
+                        <td class ="box" contenteditable="true"></td>
+                        <td class ="box" contenteditable="true"></td>
+                <tbody>
+                    <tr>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                    <tr>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                    <tr>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box" contenteditable="true"></td>
+                        <td class="box"  contenteditable="true"></td>
+        
+        <div class="main-container">
+            <div class="stopwatch-container">
+                <div class="container">
+                    <button class="btn1" onclick="start()">Start</button>
+                    <button class="btn1" onclick="pause()">Pause</button>
+                    <button class="btn1" onclick="stop()">Stop</button>
+                    <button class="btn1" onclick="restart()">Restart</button>
+    
+                </div>
+                <div class="overlay"></div>
+                <div class="watch">
+                <div class="stopwatchvalue"><pre>min sec ms</pre></div> 
+                <div class="stopwatch">00 : 00 : 00 <br>
+                                        
+                </div>
+            </div>
+        </div>
+    </table>
+
+        <div>
+            <button class="btn" id="solveButton" type="button">SOLVE</button>
+            <button class="btn" id="clearButton" type="button">CLEAR BOARD</button>
+        </div>
+    </div>
+
+    <div class=" footer" style="text-align: center;">
+        <p class=" footer-text">
+            
+            <img src="https://media4.giphy.com/media/LpDmM2wSt6Hm5fKJVa/200w.gif?cid=6c09b952zorceou15y98qgp18fyy25gnkjev17ospyzv81g3&rid=200w.gif&ct=s"
+                style="height: 2em; width: 2em; margin: 0px 0.05em 0px 0.1em; vertical-align: -0.1em;" alt="">
+     <br>copyright ©️ Gaurav Singh  
+            </p>
+    </div>
+    <script src="stopwatch.js"
+        charset="utf-8"></script>
+    
+</body>
+
+<script type="text/javascript">
+    document.getElementById("sudokuBoard").addEventListener("keyup", function (event) {
+        if (event.target && event.target.nodeName == "TD") {
+            var validNum = /[1-9]/;
+            var tdEl = event.target;
+            if (tdEl.innerText.length > 0 && validNum.test(tdEl.innerText[0])) {
+                tdEl.innerText = tdEl.innerText[0];
+            } else {
+                tdEl.innerText = "";
+            }
+        }
+    });
+
+    document.getElementById("solveButton").addEventListener("click", function (event) {
+        var boardString = boardToString();
+        var solution = SudokuSolver.solve(boardString);
+        if (solution) {
+            stringToBoard(solution);
+        } else {
+            alert("Invalid board!");
+        }
+    })
+
+    document.getElementById("clearButton").addEventListener("click", clearBoard);
+
+    function clearBoard() {
+        var tds = document.getElementsByTagName("td");
+        for (var i = 0; i < tds.length; i++) {
+            tds[i].innerText = "";
+        }
+    }
+
+    function boardToString() {
+        var string = "";
+        var validNum = /[1-9]/;
+        var tds = document.getElementsByTagName("td");
+        for (var i = 0; i < tds.length; i++) {
+            if (validNum.test(tds[i].innerText[0])) {
+                string += tds[i].innerText;
+            } else {
+                string += "-";
+            }
+        }
+        return string;
+    }
+
+    function stringToBoard(string) {
+        var currentCell;
+        var validNum = /[1-9]/;
+        var cells = string.split("");
+        var tds = document.getElementsByTagName("td");
+        for (var i = 0; i < tds.length; i++) {
+            currentCell = cells.shift();
+            if (validNum.test(currentCell)) {
+                tds[i].innerText = currentCell;
+            }
+        }
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+    integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+    integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+    crossorigin="anonymous"></script>
+    
+
+</html>
